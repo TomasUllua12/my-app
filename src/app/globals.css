@@ -120,3 +120,25 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animaciones personalizadas */
+@keyframes glowIn {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(30px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes move_right {
+  0% { transform: rotate(0deg) translateX(8px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(8px) rotate(-360deg); }
+}
+
+/* clases extendidas */
+.animate-glowIn { animation: glowIn 4s ease-out infinite; }
+.animate-fade-up { animation: fade-up 1.5s ease forwards; }
+.animate-move-right { animation: move_right 6s linear infinite; }

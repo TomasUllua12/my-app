@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -7,19 +9,42 @@ import {
   NavigationMenuContent,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
-import { GlobeIcon } from "lucide-react";
 
 function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); // si baja más de 10px, activa el blur
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="border-b w-full flex justify-center bg-neutral-900 text-white">
-      <div className="w-full p-4 flex items-center">
+    <nav
+      className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
+        scrolled
+          ? "backdrop-blur-md bg-teal-950/60"
+          : "bg-transparent border-transparent"
+      }`}
+    >
+      <div className="w-full p-4 flex items-center text-white">
         {/* Bloque Izquierdo */}
-        <div className="flex-1 flex">
-          <Button variant="default">
-            <GlobeIcon />
-          </Button>
+        <div className="flex-1 flex items-center">
+          <Link href="/" className="flex items-center space-x-2">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={150}
+              height={150}
+              priority
+            />
+          </Link>
         </div>
 
         {/* Menú centrado */}
@@ -38,7 +63,7 @@ function Navbar() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Cursos</NavigationMenuTrigger>
-                <NavigationMenuContent className="p-4">
+                <NavigationMenuContent className="p-4 bg-white/90 text-black rounded-xl shadow-lg">
                   <ul className="grid gap-2 w-sm">
                     <li>
                       <Link href="/cursos/curso1">Análisis Técnico</Link>
