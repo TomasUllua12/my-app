@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { getLatestVideos } from "@/lib/youtube";
 import { Play, Calendar, ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 interface Video {
   id: string;
@@ -162,7 +163,7 @@ export default function YoutubeSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <AnimatePresence>
-            {videos.map((video, index) => (
+            {videos.map((video) => (
               <motion.div
                 key={video.id}
                 variants={cardVariants}
@@ -174,11 +175,13 @@ export default function YoutubeSection() {
                     whileHover="hover"
                     className="relative"
                   >
-                    <img
+                    <Image
                       src={video.thumbnail}
                       alt={video.title}
+                      width={400}
+                      height={192}
                       className="w-full h-48 object-cover"
-                      loading="lazy"
+                      priority={false}
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                     <div className="absolute inset-0 flex items-center justify-center">

@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Users, Star, Shield, CheckCircle, ChevronDown } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { Unna } from "next/font/google";
+import Image from "next/image";
 
 const unna = Unna({ 
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function Hero() {
 
   useEffect(() => {
     const generateStars = () => {
-      const starsArray = Array.from({ length: 600 }, (_, i) => {
+      const starsArray = Array.from({ length: 800 }, (_, i) => {
         return {
           id: i,
           top: Math.floor(Math.random() * window.innerHeight),
@@ -54,18 +55,10 @@ export default function Hero() {
 
   const avatarVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: (i: number) => ({
+    visible: () => ({
       opacity: 1,
       scale: 1
     })
-  };
-
-  const badgeVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1
-    }
   };
 
   return (
@@ -130,9 +123,11 @@ export default function Hero() {
                   variants={avatarVariants}
                   className="relative group"
                 >
-                  <img
+                  <Image
                     src={client.image}
                     alt={client.name}
+                    width={20}
+                    height={20}
                     className="w-5 h-5 rounded-full border border-white/40 object-cover shadow-sm group-hover:scale-110 transition-transform duration-300"
                   />
                 </motion.div>
@@ -162,16 +157,16 @@ export default function Hero() {
           29 años de experiencia en el mercado
         </motion.p>
 
-        <motion.h1 
-          className="text-4xl md:text-6xl/17 font-bold mb-4 bg-gradient-to-r from-[#aadfca] via-white to-[#aadfca] bg-clip-text text-transparent animate-fade-up" 
-          style={{ animationDelay: "0.2s" }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          Llevá tus decisiones financieras <br />
-          al <span className="font-[unna] text-4xl md:text-7xl">SIGUIENTE NIVEL</span>
-        </motion.h1>
+                 <motion.h1 
+           className="text-4xl md:text-6xl/17 font-bold mb-4 bg-gradient-to-r from-[#aadfca] via-white to-[#aadfca] bg-clip-text text-transparent animate-fade-up" 
+           style={{ animationDelay: "0.2s" }}
+           initial={{ opacity: 0, y: 30 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.4, duration: 0.8 }}
+         >
+           Llevá tus decisiones financieras <br />
+           al <span className={`${unna.className} text-4xl md:text-7xl`}>SIGUIENTE NIVEL</span>
+         </motion.h1>
 
         <motion.p 
           className="max-w-md mx-auto text-gray-300 text-base md:text-1xl mb-8 animate-fade-up" 
