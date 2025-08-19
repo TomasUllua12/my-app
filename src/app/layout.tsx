@@ -1,6 +1,6 @@
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/layout/navbar"
 import "./globals.css"
-import Footer from "@/components/footer"
+import Footer from "@/components/layout/footer"
 import { Inter } from "next/font/google";
 
 const inter = Inter({ 

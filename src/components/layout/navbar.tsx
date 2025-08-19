@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
 
@@ -42,8 +42,8 @@ function Navbar() {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={150}
-              height={150}
+              width={100}
+              height={100}
               className="w-28 md:w-36 h-auto"
               priority
             />

@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import YoutubeSection from "@/components/YoutubeSection";
 import { ShieldCheck, LineChart, Clock, Users } from "lucide-react";
 
 export default function Home() {
@@ -51,6 +52,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <YoutubeSection />
     </div>
   );
 }
