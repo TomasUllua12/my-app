@@ -65,21 +65,8 @@ function Navbar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Cursos</NavigationMenuTrigger>
-                <NavigationMenuContent className="p-4 bg-white/90 text-black rounded-xl shadow-lg">
-                  <ul className="grid gap-2 w-sm">
-                    <li>
-                      <Link href="/cursos/curso1">Análisis Técnico</Link>
-                    </li>
-                    <li>
-                      <Link href="/cursos/curso2">Elliott Wave</Link>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/articulos" className="px-4">
-                  Artículos
+                <Link href="/cursos" className="px-4">
+                  Cursos
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -125,19 +112,8 @@ function Navbar() {
               <Link className="px-4 py-3 hover:bg-white/10" href="/about" onClick={() => setMobileOpen(false)}>
                 Sobre nosotros
               </Link>
-              <details>
-                <summary className="px-4 py-3 hover:bg-white/10 cursor-pointer list-none">Cursos</summary>
-                <div className="flex flex-col border-t border-white/10">
-                  <Link className="px-6 py-3 hover:bg-white/10" href="/cursos/curso1" onClick={() => setMobileOpen(false)}>
-                    Análisis Técnico
-                  </Link>
-                  <Link className="px-6 py-3 hover:bg-white/10" href="/cursos/curso2" onClick={() => setMobileOpen(false)}>
-                    Elliott Wave
-                  </Link>
-                </div>
-              </details>
-              <Link className="px-4 py-3 hover:bg-white/10" href="/articulos" onClick={() => setMobileOpen(false)}>
-                Artículos
+              <Link className="px-4 py-3 hover:bg-white/10" href="/cursos" onClick={() => setMobileOpen(false)}>
+                Cursos
               </Link>
               <Link className="px-4 py-3 hover:bg-white/10" href="/contacto" onClick={() => setMobileOpen(false)}>
                 Contacto
