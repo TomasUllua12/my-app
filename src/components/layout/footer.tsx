@@ -88,7 +88,7 @@ function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 text-white">
+    <footer className="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 text-white border-t-1 border-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <motion.div
           variants={containerVariants}
