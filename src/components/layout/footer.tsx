@@ -210,8 +210,6 @@ function Footer() {
 
         {/* Línea divisoria */}
         <motion.div
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className="border-t border-teal-700 mt-12 pt-8"

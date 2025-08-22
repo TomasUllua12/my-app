@@ -165,7 +165,7 @@ export default function Hero() {
            transition={{ delay: 0.4, duration: 0.8 }}
          >
            Llevá tus decisiones financieras <br />
-           al <span className={`${unna.className} text-4xl md:text-7xl`}>SIGUIENTE NIVEL</span>
+           al <span className={`${unna.className} text-4xl md:text-7xl bg-gradient-to-r from-[#ddc145] via-[#ffed88] to-[#ddc145] bg-clip-text text-transparent`}>SIGUIENTE NIVEL</span>
          </motion.h1>
 
         <motion.p 
