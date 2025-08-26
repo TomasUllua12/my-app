@@ -31,7 +31,7 @@ function Navbar() {
     <nav
       className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
         scrolled
-          ? "backdrop-blur-md bg-teal-950/40"
+          ? "backdrop-blur-md bg-teal-950/60"
           : "bg-transparent border-transparent"
       }`}
     >

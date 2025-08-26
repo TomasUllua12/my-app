@@ -111,7 +111,7 @@ export default function Hero() {
           variants={socialProofVariants}
           initial="hidden"
           animate="visible"
-          className="mb-6"
+          className="mb-4"
         >
           <div className="inline-flex items-center gap-3 bg-white/8 backdrop-blur-sm border border-white/15 rounded-full px-3 py-2 shadow-sm">
             {/* Avatares de clientes */}
@@ -132,7 +132,7 @@ export default function Hero() {
                   />
                 </motion.div>
               ))}
-              <div className="w-5 h-5 rounded-full bg-gradient-to-r from-teal-600 to-emerald-700 border border-white/40 flex items-center justify-center text-white text-xs font-medium shadow-sm">
+              <div className="w-5 h-5 rounded-full bg-gradient-to-r from-amber-600 to-amber-500 border border-white/40 flex items-center justify-center text-white text-xs font-medium shadow-sm">
                 +
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Hero() {
             {/* Texto de confianza minimalista */}
             <div className="flex items-center gap-1.5">
               <p className="text-white text-xs font-medium">
-                <span className="text-teal-600 font-semibold">+200</span> Clientes
+                <span className="text-amber-300 font-semibold">+200</span> Clientes
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function Hero() {
 
         {/* Experiencia */}
         <motion.p 
-          className="border border-[#6af4e380] text-white px-6 py-2 rounded-full text-sm mb-8 animate-fade-up" 
+          className="border border-[#f4f26a80] text-white px-6 py-2 rounded-full text-xs mb-8 animate-fade-up" 
           style={{ animationDelay: "0.05s" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -185,14 +185,14 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <motion.button 
-            className="px-6 py-3 rounded-2xl text-white border border-[#cfb000] bg-[#1b150850] hover:bg-[#cfb000] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium"
+            className="px-8 py-3 rounded-[5px] text-white border border-[#ffd900] bg-[#1b150850] hover:bg-[#ffd90044] transition-all duration-100 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium text-sm"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             Prueba gratuita
           </motion.button>
           <motion.button 
-            className="px-6 py-3 rounded-2xl text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium"
+            className="px-6 py-3 rounded-[5px] text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium text-sm"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
