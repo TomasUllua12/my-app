@@ -212,7 +212,7 @@ function Footer() {
         <motion.div
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="border-t border-teal-700 mt-12 pt-8"
+          className="border-t border-yellow-500 mt-12 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-slate-400 text-sm">

@@ -55,22 +55,22 @@ function Navbar() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link href="/" className="px-4">
+                <Link href="/" className="px-4 hover:text-yellow-500">
                   Inicio
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/about" className="px-4">
+                <Link href="/about" className="px-4 hover:text-yellow-500">
                   Sobre nosotros
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/cursos" className="px-4">
+                <Link href="/cursos" className="px-4 hover:text-yellow-500">
                   Cursos
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/contacto" className="px-4">
+                <Link href="/contacto" className="px-4 hover:text-yellow-500">
                   Contacto
                 </Link>
               </NavigationMenuItem>

@@ -185,14 +185,14 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <motion.button 
-            className="px-6 py-3 rounded-full text-white border border-[#00cfc4] bg-[#081b1650] hover:bg-[#00cfc4] hover:text-[#001210] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium"
+            className="px-6 py-3 rounded-2xl text-white border border-[#cfb000] bg-[#1b150850] hover:bg-[#cfb000] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             Prueba gratuita
           </motion.button>
           <motion.button 
-            className="px-6 py-3 rounded-full text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium"
+            className="px-6 py-3 rounded-2xl text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
