@@ -4,6 +4,7 @@ import ModulesSection from "@/components/ModulesSection";
 import ServicesSection from "@/components/ServicesSection";
 import YoutubeSection from "@/components/YoutubeSection";
 import Ventajas from "@/components/Ventajas";
+import ContactSection from "@/components/ContactSection";
 import YouTubeStickyCard from "@/components/YouTubeStickyCard";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
       <ModulesSection />
       <Ventajas />
       <YoutubeSection />
-      <YouTubeStickyCard />
+      <ContactSection />
     </div>
   );
 }

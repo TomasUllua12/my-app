@@ -13,6 +13,15 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Menu as MenuIcon, X as CloseIcon } from "lucide-react";
+import { STIX_Two_Text } from "next/font/google";
+
+const stixTwoText = STIX_Two_Text({ 
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  variable: "--font-stix-two-text",
+  display: "swap",
+});
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -38,15 +47,17 @@ function Navbar() {
       <div className="w-full px-4 py-3 md:py-4 flex items-center text-white">
         {/* Bloque Izquierdo */}
         <div className="flex-1 flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-28 md:w-36 h-auto"
-              priority
-            />
+          <Link href="/" className="flex items-center space-x-3">
+                         <Image
+               src="/logo_navbar.png"
+               alt="Logo"
+               width={48}
+               height={48}
+               priority
+             />
+            <span className={`${stixTwoText.className} text-lg md:text-2xl text-white font-normal`}>
+              Ruben J. Ullua
+            </span>
           </Link>
         </div>
 

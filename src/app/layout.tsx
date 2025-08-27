@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/navbar"
 import "./globals.css"
 import Footer from "@/components/layout/footer"
 import { Inter } from "next/font/google";
+import YouTubeStickyCard from "@/components/YouTubeStickyCard";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${inter.variable} font-inter min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-1">{children}</main>
+        <YouTubeStickyCard />
         <Footer />
       </body>
     </html>

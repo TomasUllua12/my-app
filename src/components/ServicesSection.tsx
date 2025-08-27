@@ -63,8 +63,6 @@ export default function ServicesSection() {
                     </h2>
                     <p className="text-[1rem] text-gray-600 max-w-5xl mx-auto">
                         Ofrecemos un servicio de análisis y proyección para los principales mercados de referencia.
-                        <br />
-                        Consiste en la visualización de análisis y proyecciones dentro de la AppWeb, asistencia analítica durante la jornada operativa, sugerencia de estrategias operativas, acceso a Webinarios de Análisis y consultas con el analista.
                     </p>
                 </motion.div>
 
