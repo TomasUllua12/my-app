@@ -70,7 +70,7 @@ export default function TrustedCompanies() {
           <h2 className="text-2xl md:text-2xl font-semibold text-gray-800 mb-3">
             Empresas que confiaron en <span className={`${unna.className} text-3xl md:text-3xl bg-gradient-to-r from-[#0b2419] via-[#0b2419] to-[#0b2419] bg-clip-text text-transparent`}>Ruben J. Ullua</span> 
           </h2>
-          <div className="w-120 h-1 bg-gradient-to-r from-[#ffffff] to-[#026154] mx-auto" />
+          <div className="w-120 h-1 bg-gradient-to-r from-[#002b1c] to-[#026154] mx-auto rounded-[50px]" />
         </motion.div>
 
         {/* Slider */}
