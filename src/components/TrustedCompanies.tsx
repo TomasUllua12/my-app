@@ -57,7 +57,7 @@ export default function TrustedCompanies() {
   return (
     <section
       id="trusted-companies"
-      className="w-full bg-white py-16 relative overflow-hidden"
+      className="w-full bg-white pt-10 pb-4 relative overflow-hidden"
     >
       <div className="w-full px-4 relative z-10">
         {/* Título */}
@@ -65,12 +65,12 @@ export default function TrustedCompanies() {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center mb-8 md:mb-12"
+          className="text-center mb-3 md:mb-5"
         >
-          <h2 className="text-2xl md:text-2xl font-semibold text-gray-800 mb-3">
-            Empresas que confiaron en <span className={`${unna.className} text-3xl md:text-3xl bg-gradient-to-r from-[#0b2419] via-[#0b2419] to-[#0b2419] bg-clip-text text-transparent`}>Ruben J. Ullua</span> 
+          <h2 className="text-[1.2rem] md:text-[1.2rem] font-semibold text-gray-800 mb-1">
+            Empresas que confiaron en <span className={`${unna.className} text-xl md:text-2xl bg-gradient-to-r from-[#0b2419] via-[#0b2419] to-[#0b2419] bg-clip-text text-transparent`}>Ruben J. Ullua</span> 
           </h2>
-          <div className="w-120 h-1 bg-gradient-to-r from-[#002b1c] to-[#026154] mx-auto rounded-[50px]" />
+          <div className="w-90 h-[0.180rem] bg-gradient-to-r from-[#003321] to-[#02a08b] mx-auto rounded-[50px]" />
         </motion.div>
 
         {/* Slider */}
@@ -82,14 +82,14 @@ export default function TrustedCompanies() {
             {logos.map((company, i) => (
               <div
                 key={`${company.name}-${i}`}
-                className="company flex-shrink-0 mx-4 md:mx-8 flex items-center justify-center"
-                style={{ minWidth: 120 }}
+                className="company flex-shrink-0 mx-4 md:mx-2 flex items-center justify-center"
+                style={{ minWidth: 50 }}
               >
                 <Image
                   src={company.logo}
-                  alt={`Logo de ${company.name}`}
-                  width={160}
-                  height={80}
+                  alt={`Logo de ${company.name}`}   
+                  width={80}
+                  height={60}
                   className="h-[36px] md:h-[60px] w-auto object-contain"
                 />
               </div>

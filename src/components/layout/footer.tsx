@@ -89,7 +89,7 @@ function Footer() {
 
   return (
     <footer className="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 text-white border-t">
-      <div className="max-w-7xl mx-auto px-4 py-16">
+      <div className="max-w-5xl mx-auto px-4 py-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -103,13 +103,13 @@ function Footer() {
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={180}
+                width={120}
                 height={60}
-                className="h-12 w-auto filter brightness-0 invert"
+                className="h-10 w-auto filter brightness-0 invert"
                 priority
               />
             </Link>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6">
+            <p className="text-slate-300 text-[0.7rem] leading-relaxed mb-6">
               Especialistas en análisis técnico y formación profesional para traders. 
               Nuestro compromiso es proporcionar herramientas y conocimientos de calidad.
             </p>
@@ -137,13 +137,13 @@ function Footer() {
 
           {/* Navegación */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
-            <h3 className="text-lg font-semibold mb-6 text-white">Navegación</h3>
+            <h3 className="text-sm font-semibold mb-6 text-white">Navegación</h3>
             <nav className="space-y-3">
               {navigationLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-slate-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform"
+                  className="block text-[0.8rem] text-slate-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform"
                 >
                   {link.label}
                 </Link>
@@ -153,13 +153,13 @@ function Footer() {
 
           {/* Cursos */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
-            <h3 className="text-lg font-semibold mb-6 text-white">Cursos</h3>
+            <h3 className="text-sm font-semibold mb-6 text-white">Cursos</h3>
             <nav className="space-y-3">
               {courseLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block text-slate-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform"
+                  className="block text-[0.8rem] text-slate-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform"
                 >
                   {link.label}
                 </Link>
@@ -169,26 +169,26 @@ function Footer() {
 
           {/* Contacto y redes sociales */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
-            <h3 className="text-lg font-semibold mb-6 text-white">Contacto</h3>
+            <h3 className="text-sm font-semibold mb-6 text-white">Contacto</h3>
             
             {/* Información de contacto */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 mb-6">
               {contactInfo.map((contact, index) => (
                 <Link
                   key={index}
                   href={contact.href}
                   className="flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-300 group"
                 >
-                  <contact.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-sm">{contact.text}</span>
+                  <contact.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
+                  <span className="text-[0.7rem]">{contact.text}</span>
                 </Link>
               ))}
             </div>
 
             {/* Redes sociales */}
             <div>
-              <h4 className="text-sm font-medium text-slate-400 mb-4">Síguenos</h4>
-              <div className="flex gap-3">
+              <h4 className="text-[0.7rem] font-medium text-slate-400 mb-3">Síguenos</h4>
+              <div className="flex gap-2">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
@@ -200,7 +200,7 @@ function Footer() {
                     whileTap={{ scale: 0.95 }}
                     aria-label={social.label}
                   >
-                    <social.icon className="w-5 h-5" />
+                    <social.icon className="w-3.5 h-3.5" />
                   </motion.a>
                 ))}
               </div>
@@ -212,10 +212,10 @@ function Footer() {
         <motion.div
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="border-t border-yellow-500 mt-12 pt-8"
+          className="border-t border-yellow-500 mt-8 pt-6"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 text-[0.7rem]">
               © {currentYear} Ruben J. Ullua. Todos los derechos reservados.
             </p>
           </div>

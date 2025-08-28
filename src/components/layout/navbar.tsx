@@ -18,7 +18,6 @@ import { STIX_Two_Text } from "next/font/google";
 const stixTwoText = STIX_Two_Text({ 
   subsets: ["latin"],
   weight: "400",
-  style: "italic",
   variable: "--font-stix-two-text",
   display: "swap",
 });
@@ -51,11 +50,11 @@ function Navbar() {
                          <Image
                src="/logo_navbar.png"
                alt="Logo"
-               width={48}
-               height={48}
+               width={35}
+               height={35}
                priority
              />
-            <span className={`${stixTwoText.className} text-lg md:text-2xl text-white font-normal`}>
+            <span className={`${stixTwoText.className} text-lg md:text-1xl text-white font-normal`}>
               Ruben J. Ullua
             </span>
           </Link>

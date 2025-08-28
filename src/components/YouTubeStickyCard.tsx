@@ -14,35 +14,35 @@ export default function YouTubeStickyCard({ url = "https://www.youtube.com/c/Rub
 
     return (
         <motion.div
-            className="fixed bottom-4 right-4 z-50"
+            className="fixed bottom-3 right-3 z-50"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ 
-                duration: 0.6, 
+            transition={{
+                duration: 0.6,
                 delay: 1,
                 ease: "easeOut"
             }}
         >
             <button
                 onClick={handleClick}
-                className="bg-neutral-800 border border-neutral-600 rounded-xl px-4 py-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-red-800 flex items-center gap-3 group cursor-pointer"
+                className="bg-neutral-800 border border-neutral-600 rounded-[10px] px-3 py-2 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-red-700 flex items-center gap-2 group cursor-pointer"
             >
                 {/* Imagen de perfil de YouTube */}
                 <div className="flex-shrink-0">
-                    <Image 
+                    <Image
                         src="/Youtube_profile.jpg"
                         alt="YouTube Profile"
-                        width={32}
-                        height={32}
-                        className="w-8 h-8 rounded-full border-1 border-neutral-500"
+                        width={25}
+                        height={25}
+                        className="w-6.5 h-6.5 rounded-full border-1 border-neutral-500"
                     />
                 </div>
-                
+
                 {/* Texto */}
-                <span className="text-sm font-medium text-white transition-colors duration-200 whitespace-nowrap">
+                <span className="text-[0.7rem] font-medium text-white transition-colors duration-200 whitespace-nowrap">
                     YouTube
                 </span>
-                <ArrowTopRightIcon className="w-5 h-5 text-white" />
+                <ArrowTopRightIcon className="w-4 h-4 text-white" />
             </button>
         </motion.div>
     );

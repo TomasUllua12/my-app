@@ -49,7 +49,7 @@ const imageVariants = {
 export default function ServicesSection() {
     return (
         <section className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 py-16 md:pt-15 md:pb-10">
-            <div className="container mx-auto px-4">
+            <div className="container mx-auto px-4 md:w-[78rem]">
                 {/* Título y subtítulo */}
                 <motion.div
                     className="text-center"
@@ -58,10 +58,10 @@ export default function ServicesSection() {
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-3xl md:text-3xl font-bold bg-gradient-to-r from-[#55d3a0] via-[#033a22] to-[#aadfca] bg-clip-text text-transparent mb-4">
+                    <h2 className="text-2xl md:text-2xl font-bold bg-gradient-to-r from-[#55d3a0] via-[#033a22] to-[#aadfca] bg-clip-text text-transparent mb-3">
                         ¿Por qué contratar nuestro servicio de análisis?
                     </h2>
-                    <p className="text-[1rem] text-gray-600 max-w-5xl mx-auto">
+                    <p className="text-[0.8rem] text-gray-600 max-w-5xl mx-auto">
                         Ofrecemos un servicio de análisis y proyección para los principales mercados de referencia.
                     </p>
                 </motion.div>
@@ -79,7 +79,7 @@ export default function ServicesSection() {
                         {services.map((service, index) => (
                             <motion.div
                                 key={service.title}
-                                className="bg-white rounded-[20px] shadow-md duration-300 p-5 border border-gray-100"
+                                className="bg-white rounded-[15px] shadow-md duration-300 p-3.5 border border-gray-100"
                                 variants={cardVariants}
                                 initial="hidden"
                                 whileInView="visible"
@@ -89,15 +89,15 @@ export default function ServicesSection() {
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0">
-                                        <div className="w-12 h-12 bg-[#254a3c] rounded-xl flex items-center justify-center">
-                                            <service.icon className="w-6 h-6 text-white" />
+                                        <div className="w-10 h-10 bg-[#254a3c] rounded-lg flex items-center justify-center">
+                                            <service.icon className="w-4 h-4 text-white" />
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-0 text-[1.1rem]">
+                                        <h3 className="font-bold text-gray-900 mb-0 text-[0.85rem]">
                                             {service.title}
                                         </h3>
-                                        <p className="text-gray-600 leading-relaxed text-[0.9rem]">
+                                        <p className="text-gray-600 leading-relaxed text-[0.7rem]">
                                             {service.description}
                                         </p>
                                     </div>
@@ -107,28 +107,28 @@ export default function ServicesSection() {
 
                         {/* Call to Action */}
                         <motion.div
-                            className="bg-gradient-to-r from-[#017c5b] to-[#002c1a] rounded-[20px] p-7 text-center text-white shadow-lg"
+                            className="bg-gradient-to-r from-[#017c5b] to-[#002c1a] rounded-[20px] p-4.5 text-center text-white shadow-lg"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <h3 className="text-[1.5rem] font-semibold mb-3">
+                            <h3 className="text-[1.2rem] font-semibold mb-2">
                                 ¿Listo para empezar?
                             </h3>
-                            <p className="text-white/90 mb-4 text-sm">
+                            <p className="text-white/90 mb-4 text-[0.7rem]">
                                 Únete a más de 200 clientes que ya confían en nuestro servicio
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <motion.button
-                                    className="px-6 py-2 bg-white text-[#10a880] font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                                    className="px-5 py-2 bg-white text-[#10a880] font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200 text-[0.8rem]"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     Prueba gratuita
                                 </motion.button>
                                 <motion.button
-                                    className="px-6 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#10a880] transition-all duration-200"
+                                    className="px-5 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#10a880] transition-all duration-200 text-[0.8rem]"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                         {/* Dibujo abstracto decorativo */}
                         <div className="absolute inset-0 z-0 flex items-center justify-center">
                             <svg
-                                className="w-[120%] h-[120%] md:w-[140%] md:h-[140%] opacity-90"
+                                className="w-[80%] h-[80%] md:w-[100%] md:h-[100%] opacity-90"
                                 viewBox="0 0 400 300"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -198,9 +198,9 @@ export default function ServicesSection() {
                             <Image
                                 src="/mockups/Mockup_RJU_Web.png"
                                 alt="Mockup de la aplicación web RJU"
-                                width={800}
-                                height={600}
-                                className="w-full h-auto"
+                                width={500}
+                                height={300}
+                                className="w-2xl h-auto"
                                 priority
                                 quality={100}
                             />
