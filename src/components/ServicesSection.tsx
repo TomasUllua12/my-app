@@ -107,7 +107,7 @@ export default function ServicesSection() {
 
                         {/* Call to Action */}
                         <motion.div
-                            className="bg-gradient-to-r from-[#017c5b] to-[#002c1a] rounded-[20px] p-4.5 text-center text-white shadow-lg"
+                            className="bg-gradient-to-r from-[#296656] to-[#002c1a] rounded-[20px] p-4.5 text-center text-white shadow-lg"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
