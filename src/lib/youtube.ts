@@ -19,6 +19,16 @@ interface YouTubeResponse {
   items: YouTubeVideo[];
 }
 
+function decodeHtmlEntities(text: string): string {
+  if (typeof window === "undefined") {
+    return text; // en server-side rendering no hay DOMParser
+  }
+  const parser = new DOMParser();
+  const decoded = parser.parseFromString(text, "text/html").body.textContent;
+  return decoded || text;
+}
+
+
 export async function getLatestVideos() {
   const API_KEY = process.env.NEXT_PUBLIC_YOUTUBE_API_KEY;
   const CHANNEL_ID = process.env.NEXT_PUBLIC_YOUTUBE_CHANNEL_ID;
@@ -41,15 +51,15 @@ export async function getLatestVideos() {
 
     return data.items.map((item: YouTubeVideo) => ({
       id: item.id.videoId,
-      title: item.snippet.title,
+      title: decodeHtmlEntities(item.snippet.title),
       thumbnail: item.snippet.thumbnails.high.url,
       publishedAt: item.snippet.publishedAt,
-      description: item.snippet.description,
+      description: decodeHtmlEntities(item.snippet.description),
       channelTitle: item.snippet.channelTitle,
     }));
+
   } catch (error) {
     console.error('Error fetching YouTube videos:', error);
     return [];
   }
 }
-  
