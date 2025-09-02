@@ -125,7 +125,7 @@ export default function Hero() {
       </div>
 
       {/* Contenido Hero */}
-      <section className="relative z-50 flex flex-col items-center justify-center h-full text-center px-4">
+      <section className="relative z-50 flex flex-col items-center justify-center h-full text-center px-4 -translate-y-[2rem] sm:-translate-y-[1rem] md:-translate-y-[0rem]">
         {/* Social Proof */}
         <motion.div
           variants={socialProofVariants}
