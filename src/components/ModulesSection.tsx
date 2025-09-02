@@ -174,7 +174,7 @@ export default function ModulesSection() {
                             Adquiera su suscripción y aproveche del mejor análisis técnico profesional, oportuno y relevante.
                         </p>
                         <motion.button
-                            className="group bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold px-8 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-100 transform hover:scale-105 flex items-center justify-center mx-auto gap-3 text-md"
+                            className="cursor-pointer group bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold px-8 py-2 rounded-xl shadow-lg hover:shadow-xl transition-all duration-100 transform hover:scale-105 flex items-center justify-center mx-auto gap-3 text-md"
                             whileHover={{ y: -2 }}
                             whileTap={{ scale: 0.98 }}
                         >

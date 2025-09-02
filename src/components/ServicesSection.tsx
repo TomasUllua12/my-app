@@ -121,14 +121,14 @@ export default function ServicesSection() {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 justify-center">
                                 <motion.button
-                                    className="px-5 py-2 bg-white text-[#10a880] font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200 text-[0.8rem]"
+                                    className="cursor-pointer px-5 py-2 bg-white text-[#10a880] font-semibold rounded-lg hover:bg-gray-50 transition-colors duration-200 text-[0.8rem]"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
                                     Prueba gratuita
                                 </motion.button>
                                 <motion.button
-                                    className="px-5 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#10a880] transition-all duration-200 text-[0.8rem]"
+                                    className="cursor-pointer px-5 py-2 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#10a880] transition-all duration-200 text-[0.8rem]"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >

@@ -91,10 +91,10 @@ function Navbar() {
         {/* Bloque Derecho */}
         <div className="flex-1 flex justify-end gap-2 items-center">
           <div className="hidden lg:flex gap-2">
-            <Button variant="cyan">
+            <Button variant="cyan" className="cursor-pointer">
               Acceso servicio <ArrowTopRightIcon />
             </Button>
-            <Button variant="teal">
+            <Button variant="teal" className="cursor-pointer">
               Campus virtual <ArrowTopRightIcon />
             </Button>
           </div>

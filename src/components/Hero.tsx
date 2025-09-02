@@ -5,12 +5,30 @@ import { ChevronDown } from "lucide-react";
 import { Unna } from "next/font/google";
 import Image from "next/image";
 
-const unna = Unna({ 
+const unna = Unna({
   subsets: ["latin"],
   variable: "--font-unna",
   display: "swap",
   weight: "700",
 });
+
+function getYearsExperience() {
+  const startDate = new Date(1996, 0, 1); // 1 enero 1996
+  const today = new Date();
+
+  let years = today.getFullYear() - startDate.getFullYear();
+
+  // Si todavía no pasó el aniversario este año, restamos 1
+  const hasAnniversaryPassed =
+    today.getMonth() > startDate.getMonth() ||
+    (today.getMonth() === startDate.getMonth() && today.getDate() >= startDate.getDate());
+
+  if (!hasAnniversaryPassed) {
+    years--;
+  }
+
+  return years;
+}
 
 export default function Hero() {
   const [stars, setStars] = useState<Array<{
@@ -47,8 +65,8 @@ export default function Hero() {
 
   const socialProofVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0
     }
   };
@@ -60,6 +78,8 @@ export default function Hero() {
       scale: 1
     })
   };
+
+  const yearsExperience = getYearsExperience();
 
   return (
     <div className="relative w-full h-screen overflow-hidden z-10">
@@ -81,7 +101,7 @@ export default function Hero() {
             />
           </picture>
         </div>
-        
+
         <div id="galaxy_eff" className="galaxy_eff absolute inset-0 w-4xl h-60 rotate-30 -translate-x-[3rem] -translate-y-[-23rem]">
           {stars.map((star) => (
             <div
@@ -147,29 +167,31 @@ export default function Hero() {
         </motion.div>
 
         {/* Experiencia */}
-        <motion.p 
-          className="border border-[#f4f26a80] text-white px-4 py-1.5 rounded-full text-[0.6rem] mb-5 animate-fade-up" 
+        <motion.p
+          className="border border-[#f4f26a80] text-white px-4 py-1.5 rounded-full text-[0.6rem] mb-5 animate-fade-up flex items-center gap-2"
           style={{ animationDelay: "0.05s" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
-          29 años de experiencia en el mercado
+          {/* Luz parpadeante */}
+          <div className="w-1.5 h-1.5 bg-[#fbff00] rounded-full animate-pulse shadow-[0_0_8px_#f4f26a]"></div>
+          {yearsExperience} años de experiencia en el mercado
         </motion.p>
 
-                 <motion.h1 
-           className="text-4xl md:text-5xl/15 font-bold mb-4 bg-gradient-to-r from-[#aadfca] via-white to-[#aadfca] bg-clip-text text-transparent animate-fade-up" 
-           style={{ animationDelay: "0.2s" }}
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.4, duration: 0.8 }}
-         >
-           Llevá tus decisiones financieras <br />
-           al <span className={`${unna.className} text-3xl md:text-6xl bg-gradient-to-r from-[#ddc145] via-[#ffed88] to-[#ddc145] bg-clip-text text-transparent`}>SIGUIENTE NIVEL</span>
-         </motion.h1>
+        <motion.h1
+          className="text-4xl md:text-5xl/15 font-bold mb-4 bg-gradient-to-r from-[#aadfca] via-white to-[#aadfca] bg-clip-text text-transparent animate-fade-up"
+          style={{ animationDelay: "0.2s" }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
+        >
+          Llevá tus decisiones financieras <br />
+          al <span className={`${unna.className} text-3xl md:text-6xl bg-gradient-to-r from-[#ddc145] via-[#ffed88] to-[#ddc145] bg-clip-text text-transparent`}>SIGUIENTE NIVEL</span>
+        </motion.h1>
 
-        <motion.p 
-          className="max-w-xs mx-auto text-gray-300 text-base md:text-[0.80rem] mb-7 animate-fade-up" 
+        <motion.p
+          className="max-w-xs mx-auto text-gray-300 text-base md:text-[0.80rem] mb-7 animate-fade-up"
           style={{ animationDelay: "0.35s" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -178,21 +200,21 @@ export default function Hero() {
           Informes, seguimiento y asesoramiento para invertir con estrategia.
         </motion.p>
 
-        <motion.div 
+        <motion.div
           className="flex gap-4 flex-wrap justify-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
-          <motion.button 
-            className="px-6 py-2.5 rounded-[5px] text-white border border-[#ffd900] bg-[#1b150850] hover:bg-[#ffd90044] transition-all duration-100 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium text-[0.7rem]"
+          <motion.button
+            className="cursor-pointer px-6 py-2.5 rounded-[5px] text-white border border-[#ffd900] bg-[#1b150850] hover:bg-[#ffd90044] transition-all duration-100 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium text-[0.7rem]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             Prueba gratuita
           </motion.button>
-          <motion.button 
-            className="px-4 py-2 rounded-[5px] text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium text-[0.7rem]"
+          <motion.button
+            className="cursor-pointer px-4 py-2 rounded-[5px] text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium text-[0.7rem]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -201,7 +223,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Botón de scroll animado */}
-        <motion.div 
+        <motion.div
           className="absolute bottom-5 left-1/2 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
@@ -210,7 +232,7 @@ export default function Hero() {
           <motion.button
             className="group flex flex-col items-center gap-2 text-white/70 hover:text-white transition-colors duration-300"
             animate={{ y: [0, -6, 0] }}
-            transition={{ 
+            transition={{
               duration: 2,
               repeat: Infinity,
               ease: "easeInOut"
@@ -221,7 +243,7 @@ export default function Hero() {
               <motion.div
                 className="w-1 h-2.5 bg-white/60 rounded-full group-hover:bg-white transition-colors duration-300"
                 animate={{ y: [0, 6, 0] }}
-                transition={{ 
+                transition={{
                   duration: 1.5,
                   repeat: Infinity,
                   ease: "easeInOut"
