@@ -40,7 +40,7 @@ export default function Hero() {
 
   useEffect(() => {
     const generateStars = () => {
-      const starsArray = Array.from({ length: 800 }, (_, i) => {
+      const starsArray = Array.from({ length: 600 }, (_, i) => {
         return {
           id: i,
           top: Math.floor(Math.random() * window.innerHeight),
@@ -167,7 +167,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Experiencia */}
-        <motion.p
+        <motion.div
           className="border border-[#f4f26a80] text-white px-4 py-1.5 rounded-full text-[0.6rem] mb-5 animate-fade-up flex items-center gap-2"
           style={{ animationDelay: "0.05s" }}
           initial={{ opacity: 0, y: 20 }}
@@ -176,8 +176,8 @@ export default function Hero() {
         >
           {/* Luz parpadeante */}
           <div className="w-1.5 h-1.5 bg-[#fbff00] rounded-full animate-pulse shadow-[0_0_8px_#f4f26a]"></div>
-          {yearsExperience} años de experiencia en el mercado
-        </motion.p>
+          <span>{yearsExperience} años de experiencia en el mercado</span>
+        </motion.div>
 
         <motion.h1
           className="text-4xl md:text-5xl/15 font-bold mb-4 bg-gradient-to-r from-[#aadfca] via-white to-[#aadfca] bg-clip-text text-transparent animate-fade-up"

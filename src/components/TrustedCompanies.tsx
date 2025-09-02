@@ -48,7 +48,7 @@ export default function TrustedCompanies() {
   }, []);
 
   // Duplicamos la lista para el efecto infinito
-  const logos = [...companies, ...companies];
+  const logos = [...companies, ...companies, ...companies];
 
   // Ajusta la velocidad: más logos → más lento para que la lectura sea cómoda.
   // Cambia el multiplicador si quieres más/menos velocidad.
