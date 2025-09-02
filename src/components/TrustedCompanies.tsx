@@ -67,8 +67,15 @@ export default function TrustedCompanies() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-3 md:mb-5"
         >
-          <h2 className="text-[1.2rem] md:text-[1.2rem] font-semibold text-gray-800 mb-1">
-            Empresas que confiaron en <span className={`${unna.className} text-xl md:text-2xl bg-gradient-to-r from-[#0b2419] via-[#0b2419] to-[#0b2419] bg-clip-text text-transparent`}>Ruben J. Ullua</span> 
+          <h2 className="text-[1.2rem] md:text-[1.2rem] font-semibold text-gray-800 mb-1 flex items-center justify-center gap-2">
+            Empresas que confiaron en 
+            <Image
+              src="/logos/Nombre.svg"
+              alt="Ruben J. Ullua"
+              width={120}
+              height={35}
+              className="h-4 md:h-5 w-auto"
+            />
           </h2>
           <div className="w-90 h-[0.180rem] bg-gradient-to-r from-[#003321] to-[#02a08b] mx-auto rounded-[50px]" />
         </motion.div>

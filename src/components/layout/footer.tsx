@@ -101,10 +101,10 @@ function Footer() {
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/logo.png"
-                alt="Logo"
+                src="/logos/LogoNombreSubt.svg"
+                alt="Logo Ruben J. Ullua"
                 width={120}
-                height={60}
+                height={35}
                 className="h-10 w-auto filter brightness-0 invert"
                 priority
               />

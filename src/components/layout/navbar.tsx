@@ -47,16 +47,14 @@ function Navbar() {
         {/* Bloque Izquierdo */}
         <div className="flex-1 flex items-center">
           <Link href="/" className="flex items-center space-x-3">
-                         <Image
-               src="/logo_navbar.png"
-               alt="Logo"
-               width={35}
-               height={35}
-               priority
-             />
-            <span className={`${stixTwoText.className} text-lg md:text-1xl text-white font-normal`}>
-              Ruben J. Ullua
-            </span>
+            <Image
+              src="/logos/Logo_Nombre.svg"
+              alt="Logo Ruben J. Ullua"
+              width={150}
+              height={40}
+              priority
+              className="filter brightness-0 invert"
+            />
           </Link>
         </div>
 
