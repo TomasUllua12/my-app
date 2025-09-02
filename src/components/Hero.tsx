@@ -84,25 +84,25 @@ export default function Hero() {
   return (
     <div className="relative w-full h-screen overflow-hidden z-10">
       {/* Fondo principal */}
-      <div className="absolute inset-0 bg-[url('/Home_bg_img.jpg')] bg-cover bg-center blur-[2px]" />
+      <div className="absolute inset-0 bg-[url('/Home_bg_img.jpg')] bg-cover bg-center blur-[0.1rem]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#001210] z-10" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0f221d] via-[#10a88080] to-[#087054] mix-blend-multiply z-20" />
 
       {/* Efecto estelar */}
-      <div className="absolute inset-0 z-30 top-[-160px]">
+      <div className="absolute inset-0 z-30 top-[-3rem] md:top-[-10rem]">
         <div className="galaxy_eff_svg hdt-ratio" style={{ "--aspect-ratioapt": "735/706" } as React.CSSProperties}>
           <picture>
             <source srcSet="/banner_star_mb.png" />
             <img
               loading="lazy"
-              className="ls-is-cached lazyloaded w-5xl h-5xl top-0 object-cover opacity-80"
+              className="ls-is-cached lazyloaded w-[45rem] h-[45rem] sm:w-[55rem] sm:h-[55rem] md:w-5xl md:h-5xl top-0 object-cover opacity-80"
               src="/banner_star_mb.png"
               alt="Banner star galaxy"
             />
           </picture>
         </div>
 
-        <div id="galaxy_eff" className="galaxy_eff absolute inset-0 w-4xl h-60 rotate-30 -translate-x-[3rem] -translate-y-[-23rem]">
+        <div id="galaxy_eff" className="galaxy_eff absolute inset-0 w-[25rem] h-[10rem] md:w-4xl md:h-60 rotate-30 -translate-x-[3rem] md:-translate-y-[-23rem] -translate-y-[-18rem]">
           {stars.map((star) => (
             <div
               key={star.id}
