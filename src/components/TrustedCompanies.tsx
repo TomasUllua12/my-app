@@ -57,7 +57,8 @@ export default function TrustedCompanies() {
   return (
     <section
       id="trusted-companies"
-      className="w-full bg-white pt-10 pb-4 relative overflow-hidden"
+      data-section="trusted-companies"
+      className="w-full bg-white pt-10 pb-4 relative overflow-hidden pt-20"
     >
       <div className="w-full px-4 relative z-10">
         {/* Título */}

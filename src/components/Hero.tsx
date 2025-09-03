@@ -210,6 +210,7 @@ export default function Hero() {
             className="cursor-pointer px-6 py-2.5 rounded-[5px] text-white border border-[#ffd900] bg-[#1b150850] hover:bg-[#ffd90044] transition-all duration-100 hover:shadow-[0_8px_30px_rgba(0,207,196,0.25)] font-medium text-[0.7rem]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => window.open('https://rubenullua.meteorapp.com/free-access', '_blank')}
           >
             Prueba gratuita
           </motion.button>
@@ -217,6 +218,12 @@ export default function Hero() {
             className="cursor-pointer px-4 py-2 rounded-[5px] text-white border border-[#c7fdf6] hover:bg-[#1d3c3a] transition-all duration-300 hover:shadow-[0_8px_30px_rgba(199,253,246,0.2)] font-medium text-[0.7rem]"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            onClick={() => {
+              const element = document.querySelector('[data-section="trusted-companies"]');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Conocé el servicio
           </motion.button>

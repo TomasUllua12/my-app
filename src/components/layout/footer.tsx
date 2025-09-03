@@ -120,6 +120,7 @@ function Footer() {
                 variant="cyan" 
                 size="sm"
                 className="group transition-all duration-300 hover:scale-105"
+                onClick={() => window.open('https://rubenullua.meteorapp.com/', '_blank')}
               >
                 Acceso servicio 
                 <ArrowTopRightIcon className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
@@ -128,6 +129,7 @@ function Footer() {
                 variant="teal" 
                 size="sm"
                 className="group transition-all duration-300 hover:scale-105"
+                onClick={() => window.open('https://rubenjullua.infomatika.app/campus/login.php', '_blank')}
               >
                 Campus virtual 
                 <ArrowTopRightIcon className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />

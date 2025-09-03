@@ -89,10 +89,18 @@ function Navbar() {
         {/* Bloque Derecho */}
         <div className="flex-1 flex justify-end gap-2 items-center">
           <div className="hidden lg:flex gap-2">
-            <Button variant="cyan" className="cursor-pointer">
+            <Button 
+              variant="cyan" 
+              className="cursor-pointer"
+              onClick={() => window.open('https://rubenullua.meteorapp.com/', '_blank')}
+            >
               Acceso servicio <ArrowTopRightIcon />
             </Button>
-            <Button variant="teal" className="cursor-pointer">
+            <Button 
+              variant="teal" 
+              className="cursor-pointer"
+              onClick={() => window.open('https://rubenjullua.infomatika.app/campus/login.php', '_blank')}
+            >
               Campus virtual <ArrowTopRightIcon />
             </Button>
           </div>
@@ -127,10 +135,18 @@ function Navbar() {
                 Contacto
               </Link>
               <div className="flex gap-2 p-4 border-t border-white/10">
-                <Button variant="cyan" className="flex-1">
+                <Button 
+                  variant="cyan" 
+                  className="flex-1"
+                  onClick={() => window.open('https://rubenullua.meteorapp.com/', '_blank')}
+                >
                   Acceso servicio <ArrowTopRightIcon />
                 </Button>
-                <Button variant="teal" className="flex-1">
+                <Button 
+                  variant="teal" 
+                  className="flex-1"
+                  onClick={() => window.open('https://rubenjullua.infomatika.app/campus/login.php', '_blank')}
+                >
                   Campus virtual <ArrowTopRightIcon />
                 </Button>
               </div>
