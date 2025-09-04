@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import { ArrowTopRightIcon } from '@radix-ui/react-icons';
-import { 
-  Youtube, 
-  Instagram, 
-  Facebook, 
-  Linkedin, 
+import {
+  Youtube,
+  Instagram,
+  Facebook,
+  Linkedin,
   Twitter,
   Mail,
   Phone,
@@ -23,8 +23,8 @@ function Footer() {
   const navigationLinks = [
     { href: '/', label: 'Inicio' },
     { href: '/about', label: 'Sobre nosotros' },
-    { href: '/articulos', label: 'Artículos' },
     { href: '/contacto', label: 'Contacto' },
+    { href: '/articulos', label: 'Prueba gratuita' },
   ];
 
   const courseLinks = [
@@ -33,33 +33,33 @@ function Footer() {
   ];
 
   const socialLinks = [
-    { 
-      href: 'https://youtube.com', 
-      icon: Youtube, 
+    {
+      href: 'https://youtube.com',
+      icon: Youtube,
       label: 'YouTube',
       color: 'hover:text-red-500'
     },
-    { 
-      href: 'https://instagram.com', 
-      icon: Instagram, 
+    {
+      href: 'https://instagram.com',
+      icon: Instagram,
       label: 'Instagram',
       color: 'hover:text-pink-500'
     },
-    { 
-      href: 'https://facebook.com', 
-      icon: Facebook, 
+    {
+      href: 'https://facebook.com',
+      icon: Facebook,
       label: 'Facebook',
       color: 'hover:text-blue-600'
     },
-    { 
-      href: 'https://linkedin.com', 
-      icon: Linkedin, 
+    {
+      href: 'https://linkedin.com',
+      icon: Linkedin,
       label: 'LinkedIn',
       color: 'hover:text-blue-700'
     },
-    { 
-      href: 'https://twitter.com', 
-      icon: Twitter, 
+    {
+      href: 'https://twitter.com',
+      icon: Twitter,
       label: 'Twitter',
       color: 'hover:text-blue-400'
     },
@@ -110,28 +110,28 @@ function Footer() {
               />
             </Link>
             <p className="text-slate-300 text-[0.7rem] leading-relaxed mb-6">
-              Especialistas en análisis técnico y formación profesional para traders. 
+              Especialistas en análisis técnico y formación profesional para traders.
               Nuestro compromiso es proporcionar herramientas y conocimientos de calidad.
             </p>
-            
+
             {/* Botones de acción */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button 
-                variant="cyan" 
+              <Button
+                variant="cyan"
                 size="sm"
                 className="group transition-all duration-300 hover:scale-105"
                 onClick={() => window.open('https://rubenullua.meteorapp.com/', '_blank')}
               >
-                Acceso servicio 
+                Acceso servicio
                 <ArrowTopRightIcon className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </Button>
-              <Button 
-                variant="teal" 
+              <Button
+                variant="teal"
                 size="sm"
                 className="group transition-all duration-300 hover:scale-105"
                 onClick={() => window.open('https://rubenjullua.infomatika.app/campus/login.php', '_blank')}
               >
-                Campus virtual 
+                Campus virtual
                 <ArrowTopRightIcon className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </Button>
             </div>
@@ -172,7 +172,7 @@ function Footer() {
           {/* Contacto y redes sociales */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <h3 className="text-sm font-semibold mb-6 text-white">Contacto</h3>
-            
+
             {/* Información de contacto */}
             <div className="space-y-2 mb-6">
               {contactInfo.map((contact, index) => (
