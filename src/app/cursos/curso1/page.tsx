@@ -12,6 +12,7 @@ import CourseBrochure from "@/components/course/CourseBrochure";
 import CourseVideo from "@/components/course/CourseVideo";
 import CourseGallery from "@/components/course/CourseGallery";
 import CourseCTA from "@/components/course/CourseCTA";
+import CheckoutButton from "@/components/CheckoutButton";
 
 // Datos del curso (en el futuro esto vendrá de una API o base de datos)
 const courseData = {
@@ -224,6 +225,8 @@ export default function Curso1Page() {
           primaryColor={courseData.primaryColor}
           secondaryColor={courseData.secondaryColor}
         />
+
+        <CheckoutButton />
 
         {/* Descripción */}
         <CourseDescription description={courseData.description} />
