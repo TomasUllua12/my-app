@@ -31,14 +31,14 @@ export default function CourseHeader({ title, subtitle, primaryColor, secondaryC
 
   return (
     <motion.div 
-      className="relative py-20 px-4"
+      className="relative pt-20 pb-10 px-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1 
-          className={`${unna.className} text-5xl md:text-6xl font-bold text-white mb-6`}
+          className={`${unna.className} text-3xl md:text-5xl font-bold text-white mb-6`}
           variants={itemVariants}
           initial="hidden"
           animate="visible"
@@ -46,7 +46,7 @@ export default function CourseHeader({ title, subtitle, primaryColor, secondaryC
           {title}
         </motion.h1>
         <motion.p 
-          className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-md text-gray-300 max-w-2xl mx-auto leading-relaxed font-light tracking-tight"
           variants={itemVariants}
           initial="hidden"
           animate="visible"

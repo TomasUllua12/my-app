@@ -21,18 +21,22 @@ export default function CourseDescription({ description }: CourseDescriptionProp
   if (!description) return null;
 
   return (
-    <motion.section 
-      className="max-w-4xl mx-auto px-4 py-16"
+    <motion.section
+      className="max-w-full bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: "url('/cursos/sobre_curso_bg.jpg')"
+      }}
       variants={itemVariants}
       initial="hidden"
       animate="visible"
     >
-      <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
-        <h2 className="text-2xl font-bold text-[#001210] mb-6">
+      <div className="absolute inset-0 bg-white/80"></div>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 py-12 p-8">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-[#55d3a0] via-[#033a22] to-[#aadfca] bg-clip-text text-transparent mb-6 text-center">
           Sobre este curso
         </h2>
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 leading-relaxed">
+          <p className="text-gray-700 leading-relaxed text-sm">
             {description}
           </p>
         </div>

@@ -38,17 +38,17 @@ export default function CourseVideo({ videoUrl }: CourseVideoProps) {
       initial="hidden"
       animate="visible"
     >
-      <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
+      <div className="p-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-[#001210] mb-4">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Conoce más sobre el curso
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Mira este video introductorio para entender mejor qué aprenderás
           </p>
         </div>
         
-        <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-100">
+        <div className="relative aspect-video overflow-hidden bg-gray-100">
           <iframe
             src={embedUrl}
             title="Video del curso"

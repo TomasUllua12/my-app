@@ -16,12 +16,12 @@ import CheckoutButton from "@/components/CheckoutButton";
 
 // Datos del curso (en el futuro esto vendrá de una API o base de datos)
 const courseData = {
-  title: "Análisis Técnico Avanzado",
+  title: "TRADING INTELIGENTE: Dominando el análisis técnico",
   subtitle: "Domina las técnicas más efectivas de análisis técnico para identificar oportunidades de trading con precisión",
-  description: "Este curso te llevará desde los fundamentos básicos hasta las estrategias más avanzadas de análisis técnico. Aprenderás a identificar patrones de mercado, usar indicadores técnicos de manera efectiva y desarrollar tu propia metodología de trading basada en evidencia estadística.",
+  description: "El curso propone al participante las herramientas básicas que le permitirán hacer una lectura distinta y tener una percepción diferente de la que se tiene normalmente de comportamiento de los principales mercados financieros del mundo, incluido el de commodities. Para ello, se desarrollarán temas claves como el análisis de Ia psicología del mundo inversor que le ayudará al participante tener una visión más crítica y objetiva al momento de tomar decisiones en los diferentes mercados.",
   primaryColor: "#001210",
   secondaryColor: "#0f221d",
-  
+   
   contents: [
     "Fundamentos del análisis técnico y teoría de Dow",
     "Patrones de velas japonesas y formaciones de reversión",
@@ -225,8 +225,6 @@ export default function Curso1Page() {
           primaryColor={courseData.primaryColor}
           secondaryColor={courseData.secondaryColor}
         />
-
-        <CheckoutButton />
 
         {/* Descripción */}
         <CourseDescription description={courseData.description} />
