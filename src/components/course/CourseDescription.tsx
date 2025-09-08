@@ -36,7 +36,7 @@ export default function CourseDescription({ description }: CourseDescriptionProp
           Sobre este curso
         </h2>
         <div className="prose prose-lg max-w-none">
-          <p className="text-gray-700 leading-relaxed text-sm">
+          <p className="text-gray-700 leading-relaxed text-sm text-center">
             {description}
           </p>
         </div>

@@ -10,8 +10,8 @@ import CoursePrice from "@/components/course/CoursePrice";
 import CourseSchedule from "@/components/course/CourseSchedule";
 import CourseBrochure from "@/components/course/CourseBrochure";
 import CourseVideo from "@/components/course/CourseVideo";
-import CourseGallery from "@/components/course/CourseGallery";
 import CourseCTA from "@/components/course/CourseCTA";
+import CourseOnlineSection from "@/components/course/CourseOnlineSection";
 import CheckoutButton from "@/components/CheckoutButton";
 
 // Datos del curso (en el futuro esto vendrá de una API o base de datos)
@@ -120,15 +120,6 @@ const courseData = {
   
   brochureUrl: "/brochures/analisis-tecnico-avanzado.pdf",
   videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  
-  images: [
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=600&h=400&fit=crop"
-  ]
 };
 
 export default function Curso1Page() {
@@ -229,6 +220,15 @@ export default function Curso1Page() {
         {/* Descripción */}
         <CourseDescription description={courseData.description} />
 
+        {/* Sección 100% Online */}
+        <CourseOnlineSection
+          imageUrl="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=600&fit=crop"
+          imageAlt="Estudiantes aprendiendo trading online"
+          students="+1400"
+          weeks="365"
+          rating="4.8"
+        />
+
         {/* Video */}
         <CourseVideo videoUrl={courseData.videoUrl} />
 
@@ -237,9 +237,6 @@ export default function Curso1Page() {
 
         {/* Cronograma */}
         <CourseSchedule schedule={courseData.schedule} />
-
-        {/* Galería */}
-        <CourseGallery images={courseData.images} />
 
         {/* Brochure */}
         <CourseBrochure brochureUrl={courseData.brochureUrl} />
