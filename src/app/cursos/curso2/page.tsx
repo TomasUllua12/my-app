@@ -6,11 +6,10 @@ import { useEffect, useState } from "react";
 import CourseHeader from "@/components/course/CourseHeader";
 import CourseDescription from "@/components/course/CourseDescription";
 import CourseContent from "@/components/course/CourseContent";
-import CoursePrice from "@/components/course/CoursePrice";
+import CoursePricing from "@/components/course/CoursePricing";
 import CourseSchedule from "@/components/course/CourseSchedule";
 import CourseBrochure from "@/components/course/CourseBrochure";
 import CourseVideo from "@/components/course/CourseVideo";
-import CourseCTA from "@/components/course/CourseCTA";
 import CourseOnlineSection from "@/components/course/CourseOnlineSection";
 import CheckoutButton from "@/components/CheckoutButton";
 
@@ -109,32 +108,6 @@ const courseData = {
 };
 
 export default function Curso2Page() {
-  const [particles, setParticles] = useState<Array<{
-    id: number;
-    top: number;
-    left: number;
-    duration: string;
-    size: number;
-  }>>([]);
-
-  useEffect(() => {
-    const generateParticles = () => {
-      const particlesArray = Array.from({ length: 80 }, (_, i) => {
-        return {
-          id: i,
-          top: Math.floor(Math.random() * window.innerHeight),
-          left: Math.floor(Math.random() * window.innerWidth),
-          duration: `${Math.floor(Math.random() * 8) + 6}s`,
-          size: Math.random() * 2 + 1,
-        };
-      });
-      setParticles(particlesArray);
-    };
-
-    generateParticles();
-    window.addEventListener('resize', generateParticles);
-    return () => window.removeEventListener('resize', generateParticles);
-  }, []);
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -161,23 +134,6 @@ export default function Curso2Page() {
         <div className={`absolute inset-0 bg-gradient-to-r from-[${courseData.primaryColor}]/10 via-transparent to-[${courseData.secondaryColor}]/10 animate-pulse`} 
              style={{ animationDuration: '8s' }} />
         
-        {/* Partículas flotantes */}
-        <div className="absolute inset-0 overflow-hidden">
-          {particles.map((particle) => (
-            <div
-              key={particle.id}
-              className="absolute rounded-full bg-white/20"
-              style={{
-                top: `${particle.top}px`,
-                left: `${particle.left}px`,
-                width: `${particle.size}px`,
-                height: `${particle.size}px`,
-                animation: `float ${particle.duration} linear infinite`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
 
         {/* Efecto de ondas sutiles */}
         <div className="absolute inset-0 opacity-20">
@@ -190,7 +146,7 @@ export default function Curso2Page() {
 
       {/* Contenido principal */}
       <motion.div 
-        className="relative z-10 mt-20"
+        className="relative z-20 mt-20"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -225,17 +181,17 @@ export default function Curso2Page() {
         <CourseSchedule schedule={courseData.schedule} />
 
         {/* Brochure */}
-        <CourseBrochure brochureUrl={courseData.brochureUrl} />
+        <CourseBrochure 
+          brochureUrl={courseData.brochureUrl} 
+          primaryColor={courseData.primaryColor} 
+          secondaryColor={courseData.secondaryColor} 
+        />
 
         {/* Precios */}
-        <CoursePrice prices={courseData.prices} />
-
-        {/* CTA Final */}
-        <CourseCTA
-          title="¿Listo para proteger tu capital?"
-          subtitle="Únete a traders profesionales que han aprendido a gestionar el riesgo de manera efectiva"
-          buttonText="Inscribirse ahora"
-          onEnroll={handleEnroll}
+        <CoursePricing 
+          prices={courseData.prices} 
+          primaryColor={courseData.primaryColor}
+          secondaryColor={courseData.secondaryColor}
         />
       </motion.div>
     </div>
