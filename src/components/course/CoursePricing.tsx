@@ -69,6 +69,7 @@ export default function CoursePricing({ prices, primaryColor = "#001210", second
 
   return (
     <motion.section 
+      id="course-pricing"
       className="max-w-full mx-auto px-4 py-16 relative z-30"
       variants={containerVariants}
       initial="hidden"

@@ -18,8 +18,8 @@ const courseData = {
   title: "GESTIÓN DE RIESGO: Protege tu capital",
   subtitle: "Aprende las estrategias más efectivas para proteger tu capital y maximizar tus ganancias en el trading",
   description: "Este curso te enseñará las técnicas profesionales de gestión de riesgo que utilizan los traders más exitosos del mundo. Aprenderás a calcular el tamaño de posición correcto, establecer stop losses efectivos y desarrollar una mentalidad de preservación de capital que te permitirá operar con confianza y disciplina.",
-  primaryColor: "#001210",
-  secondaryColor: "#0f221d",
+  primaryColor: "#12003D",
+  secondaryColor: "#2D004F",
    
   contents: [
     "Fundamentos de la gestión de riesgo en trading",
@@ -129,10 +129,20 @@ export default function Curso2Page() {
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Fondo animado */}
-      <div className={`absolute inset-0 bg-gradient-to-br from-[${courseData.primaryColor}] via-[${courseData.secondaryColor}] to-[${courseData.primaryColor}]`}>
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `linear-gradient(to bottom right, ${courseData.primaryColor}, ${courseData.secondaryColor}, ${courseData.primaryColor})`
+        }}
+      >
         {/* Gradiente animado */}
-        <div className={`absolute inset-0 bg-gradient-to-r from-[${courseData.primaryColor}]/10 via-transparent to-[${courseData.secondaryColor}]/10 animate-pulse`} 
-             style={{ animationDuration: '8s' }} />
+        <div 
+          className="absolute inset-0 animate-pulse" 
+          style={{ 
+            background: `linear-gradient(to right, ${courseData.primaryColor}10, transparent, ${courseData.secondaryColor}10)`,
+            animationDuration: '8s' 
+          }} 
+        />
         
 
         {/* Efecto de ondas sutiles */}
