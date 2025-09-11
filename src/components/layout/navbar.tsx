@@ -20,6 +20,8 @@ const stixTwoText = STIX_Two_Text({
   weight: "400",
   variable: "--font-stix-two-text",
   display: "swap",
+  preload: false, // No es crítica para el LCP
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 function Navbar() {

@@ -10,11 +10,11 @@
   }
   
   * {
-    @apply border-border outline-ring/50;
+    @apply border-gray-200 outline-gray-300/50;
   }
   
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-gray-900;
     font-family: var(--font-inter), system-ui, sans-serif;
   }
   
@@ -132,8 +132,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-
-
 /* Animaciones personalizadas */
 @keyframes glowIn {
   0% { opacity: 0.5; }
@@ -171,9 +169,18 @@
 }
 
 /* clases extendidas */
-.animate-glowIn { animation: glowIn 4s ease-out infinite; }
-.animate-fade-up { animation: fade-up 1.5s ease forwards; }
-.animate-move-right { animation: move_right 6s linear infinite; }
+.animate-glowIn { 
+  animation: glowIn 4s ease-out infinite; 
+  will-change: opacity;
+}
+.animate-fade-up { 
+  animation: fade-up 1.5s ease forwards; 
+  will-change: opacity, transform;
+}
+.animate-move-right { 
+  animation: move_right 6s linear infinite; 
+  will-change: transform;
+}
 
 /* Efectos estelares */
 .galaxy_eff_svg {
@@ -194,6 +201,8 @@
   border-radius: 50%;
   opacity: 0.8;
   animation: move_right 6s linear infinite;
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
 }
 
 /* Responsive para partículas */
